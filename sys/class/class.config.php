@@ -20,7 +20,7 @@ class Config
     private static function getRootPath() {
         $included_files = get_included_files();
         foreach($included_files as $file) {
-            $pos = strrpos($file, "/sys/class/class.config.php");
+            $pos = strrpos($file, "/sys/class/class.class.config.php");
             if($pos) return substr($file, 0, $pos);
         }
         return null;
@@ -156,4 +156,3 @@ class Config
         $this->settings[$key] = $value;
     }
 }
-?>
